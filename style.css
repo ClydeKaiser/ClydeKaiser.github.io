@@ -1,5 +1,24 @@
+.interstateDesc {
+  text-align: center;
+}
+
+.north {
+  animation: moveBottomToTop 4s linear infinite;
+  text-align: center;
+}
+
+@keyframes moveBottomToTop {
+  0% {
+    transform: translateY(calc(-100% - 460px));
+  }
+  100% {
+    transform: translateY(calc(100% - 225px)); /* adjustable */
+  }
+}
+
+
 .i5 {
-  animation: moveLeftToRight 5s linear infinite;
+  animation: moveLeftToRight 4s linear infinite;
 }
 
 @keyframes moveLeftToRight {
@@ -7,7 +26,7 @@
     transform: translateX(calc(-100% - 215px));
   }
   100% {
-    transform: translateX(calc(100% + 855px)); /* Adjust the value as needed */
+    transform: translateX(calc(100% + 855px)); /* adjustable */
   }
 }
 
@@ -43,4 +62,3 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
