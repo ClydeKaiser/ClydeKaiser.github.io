@@ -69,3 +69,36 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.root {
+  font-family: "IM Fell French Canon", serif;
+  background-color: #f7e1f3;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-block-size: 100dvb;
+}
+
+.thoughts {
+  font-size: clamp(3rem, 2rem + 10dvi, 16rem);
+  font-weight: inherit;
+  color: lightpink;
+  letter-spacing: -0.02em;
+  text-shadow: 
+    0 4em lightpink, 0 5em gold, 0 6em plum, 0 7em lightpink, 0 8em gold, 
+}
+
+.nick {
+  position: fixed;
+  inset-block-end: 0;
+  inset-inline-start: 50%;
+  translate: 50% 0%;
+  max-inline-size: 30%;
+  filter: grayscale(1) brightness(1.75) contrast(0.8);
+}

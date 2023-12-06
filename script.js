@@ -1,8 +1,14 @@
 // Ensure the DOM is fully loaded before accessing elements
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get the canvas element
-            var canvas = document.getElementById('roadCanvas');
-            var ctx = canvas.getContext('2d');
+document.addEventListener('DOMContentLoaded', function () {
+    // Get the canvas element
+    var canvas = document.getElementById('roadCanvas');
+    var ctx = canvas.getContext('2d');
+
+    // Add a click event listener to the canvas
+    canvas.addEventListener("click", function () {
+        // Change the content of the "demo" element to "THOUGHTS?" when clicked
+        document.getElementById("demo").innerHTML = "Glad you had some, lets discuss solutions now.";
+    });
 
             //road color
             var roadColor = '#808080';
