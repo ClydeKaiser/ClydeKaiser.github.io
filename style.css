@@ -1,3 +1,22 @@
+.solutions {
+  color: #7a92a3; 
+  font-family: 'College';
+  margin: 200px; 
+  text-align: center;
+}
+
+button {
+  background-color: #04AA6D; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
 .table {
 		font-size: 12px;
 		border: 1px solid #CCC; 

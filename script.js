@@ -1,44 +1,44 @@
 // Ensure the DOM is fully loaded before accessing elements
 document.addEventListener('DOMContentLoaded', function () {
-    // Get the canvas element
+    // the canvas element
     var canvas = document.getElementById('roadCanvas');
     var ctx = canvas.getContext('2d');
 
-    // Add a click event listener to the canvas
+    // click event listener 
     canvas.addEventListener("click", function () {
         // Change the content of the "demo" element to "THOUGHTS?" when clicked
         document.getElementById("demo").innerHTML = "Glad you had some, lets discuss solutions now.";
     });
 
-            //road color
+            // road color
             var roadColor = '#808080';
 
-            //road
+            // road
             function drawRoad() {
-                // Draw the road background
+                // the road background
                 ctx.fillStyle = roadColor;
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-                //road markings
+                // road markings
                 ctx.fillStyle = 'yellow'; 
                 var markingWidth = 30; 
                 var markingGap = 50; 
 
-                // Draw the center line
+                // center line
                 for (var i = 0; i < canvas.width; i += markingGap + markingWidth) {
                     ctx.fillRect(i, canvas.height / 2 - markingWidth / 2, markingWidth, markingWidth);
                 }
             }
              function drawCar(x, y) {
-                // Car body
+                // body of da car
                 ctx.fillStyle = 'red';
                 ctx.fillRect(x, y, 80, 40);
 
-                // Car roof
+                // car roof
                 ctx.fillStyle = 'blue';
                 ctx.fillRect(x + 10, y - 20, 60, 20);
 
-                // Wheels
+                // wheels
                 ctx.fillStyle = 'black';
                 ctx.beginPath();
                 ctx.arc(x + 20, y + 40, 10, 0, 2 * Math.PI);
@@ -46,9 +46,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 ctx.fill();
             }
 
-            // Draw the road
+            // the road
             drawRoad();
 
-            // Draw the car on the road
+            // car on the road
             drawCar(100, canvas.height - 60)
         });
+
+const toTop = () => window.scrollTo({top: 0, behavior: "smooth"});
