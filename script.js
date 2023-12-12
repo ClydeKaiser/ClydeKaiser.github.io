@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var canvas = document.getElementById('roadCanvas');
     var ctx = canvas.getContext('2d');
 
-    // click event listener 
+    // the click event listener 
     canvas.addEventListener("click", function () {
-        // Change the content of the "demo" element to "THOUGHTS?" when clicked
+        // changing the content of the "demo" element to "Glad you had some, lets discuss solutions now" when clicked
         document.getElementById("demo").innerHTML = "Glad you had some, lets discuss solutions now.";
     });
 
@@ -54,3 +54,37 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
 const toTop = () => window.scrollTo({top: 0, behavior: "smooth"});
+
+const canvas = document.createElement("canvas");
+const ctx = canvas.getContext("2d");
+document.body.appendChild(canvas);
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+
+
+ctx.beginPath();
+ctx.rect(310, 10, 80, 280);
+ctx.fillStyle = "black";
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(350, 50, 40, 0, 2 * Math.PI);
+ctx.fillStyle = "red";
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(350, 150, 40, 0, 2 * Math.PI);
+ctx.fillStyle = "yellow";
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(350, 250, 40, 0, 2 * Math.PI);
+ctx.fillStyle = "green";
+ctx.fill();
+
+ctx.beginPath();
+ctx.moveTo(350, 290);
+ctx.lineTo(350, 390);
+ctx.stroke();

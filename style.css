@@ -34,6 +34,7 @@
   margin: 200px; 
   text-align: center;
 }
+/* code above this mainly consists of small style changes, nothing really different between each one */
 
 button {
  position: fixed;
@@ -41,7 +42,7 @@ button {
   inset-inline-start: 0%;
   translate: 50% 0%;
   max-inline-size: 30%;
-/* added blury effect because we wanted to and adjusted the position   */
+/* added blury effect because we wanted to and adjusted the position. inset, max inline size, etc. all kind of work together to edit the fixed position of the button (at least thats how i think of it)   */
   filter: blur(1.5px) brightness(1.75) contrast(0.8);
   background-color: #04AA6D; 
   border: none;
@@ -51,7 +52,7 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  position: fixed;
+/*  this is mostly just some tweats to the stlye again */
 }
 
 
@@ -91,11 +92,13 @@ h3 {
 .interstateDesc {
   text-align: center;
 }
+/* again a lot of this is style stuff and padding stuff */
 
 .north {
   animation: moveBottomToTop 4s linear infinite;
   text-align: center;
 }
+/* start of the animation, giving it a name. specified ".north" to clarify for ourselves that it is the css animation moving the images */
 
 @keyframes moveBottomToTop {
   0% {
@@ -105,7 +108,7 @@ h3 {
     transform: translateY(calc(100% - 80px)); /* adjustable */
   }
 }
-
+/* the translateY calc and subtracting pixels is just us editting the final and start position of the images to make it smoother and look cleaner */
 
 .i5 {
   animation: moveLeftToRight 4s linear infinite;
@@ -119,6 +122,7 @@ h3 {
     transform: translateX(calc(100% + 937px)); /* adjustable */
   }
 }
+/* same thing as before, just changed Y to x to make it move horizontally and added and subtracted values to adujust start and final positions */
 
 .glow2 {
   font-size: 35px;
@@ -128,6 +132,7 @@ h3 {
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
 }
+/* animation stuff as before. realizing now we made a glow2 just so "The Complete Guide" could be smaller */
 
 .glow {
   font-size: 45px;
@@ -137,6 +142,7 @@ h3 {
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
 }
+/* same thing for different class.... "Traffic in Los Angeles" portion of the titile */
 
 @-webkit-keyframes glow {
   from {
@@ -146,27 +152,30 @@ h3 {
     text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
   }
 }
+/* glow animation that changed the color from ___ to ____, just a subtle change making it glow pink */
 
-.red {
+/* .red {
   background: linear-gradient(90deg, rgb(255, 87, 51), rgb(127, 0, 255));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
+/* realized we didn't need it so we're commenting it out */
 
 .root {
   font-family: "IM Fell French Canon", serif;
   background-color: #f7e1f3;
 }
-/* the entire website (*) */
+
 * {
   margin: 0;
 }
-
+/* the entire website (*) */
 body {
   display: grid;
   place-items: center;
   min-block-size: 100dvb;
 }
+/* style options */
 
 .thoughts {
   font-size: clamp(3rem, 2rem + 10dvi, 16rem);
@@ -175,6 +184,7 @@ body {
   text-shadow: 
     0 4em lightpink, 0 5em gold, 0 6em plum, 0 7em lightpink, 0 8em gold, 
 }
+/* styling of the text for our event listener, which will be clicked and changed to different text */
 
 .nick {
   position: fixed;
