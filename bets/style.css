@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #999;
+}
+
+a {
+  color: #e3daa1;
+}
+
+a:visited{
+  color: #e3daa1;
+}
+
+.navBar {
+  border: double;
+  text-align: center;
+  color: #e3daa1;
+}
+
+.navBar h3 {
+  display: inline-block;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.navBar h3:hover {
+  background-color: black
+}
+
+.title{
+  flex: 70%;
+  border: double;
+  color: #e3daa1;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-image: radial-gradient(black, black, transparent);
+}
+.holder{
+  border: double;
+  color: white;
+  text-align: center;
+  padding: 300px 50px;
+  margin-bottom: 20px;
+  
+}
+
+.flex{
+  display: flex;
+}
+
+.previous{
+  flex: 30%;
+  border: double;
+  color: #e3daa1;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-image: radial-gradient(black, black, transparent);
+}
+
+.previous div{
+  border: double;
+  color: white;
+  text-align: center;
+  padding: 300px 50px;
+  margin-bottom: 20px;
+}
