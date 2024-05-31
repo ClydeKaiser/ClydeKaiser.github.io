@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #999;
+}
+
+a {
+  color: #e3daa1;
+}
+
+a:visited{
+  color:  #e3daa1;
+}
+
+.navBar {
+  border: double;
+  text-align: center;
+  color: #e3daa1;
+}
+
+.navBar h3 {
+  display: inline-block;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.navBar h3:hover {
+  background-color: black
+}
+
+.main{
+  background-image: radial-gradient(black, black, transparent);
+  margin: -5px;
+  padding: 20px;
+  color: #e3daa1;
+  border: double;
+}
+
+h1{
+  text-align: center;
+}
+
+img{
+  width: 40%;
+  display: block;
+  margin: auto;
+}
+
+.flex{
+  display: flex
+}
+
+.description{
+  flex: 1;
+  margin-top: 20px;
+  font-size: 20px;
+  border: double;
+}
+
+p{
+  padding: 20px;
+}
+
+h2{
+  padding-left: 20px;
+}
+
+.bet{
+  margin-top: 20px;
+  border: double;
+}
+
+fieldset{
+  text-align: center;
+  margin: 30px;
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+#betBtn {
+  border: none;
+  background-color: #e3daa1;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+  padding: 20px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 20px;
+}
+
+#betBtn:hover{
+  background-color: white;
+}
