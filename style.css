@@ -1,197 +1,281 @@
-.mainly {
-  color: pink;
-  font-size: 28px;
+* {
+  box-sizing: border-box;
 }
 
-.h44 {
-  color: pink;
-  font-size: 28px;
+body {
+  background-color: #999;
 }
 
-.table2 {
-  margin: auto;
+
+a {
+  color: #e3daa1;
 }
 
-.no-traffic {
-  color: green;
+a:visited{
+  color: #e3daa1;
 }
 
-.heavy-traffic {
-  color: red;
+.navBar {
+  border: double;
+  text-align: center;
+  color: #e3daa1;
 }
 
-.falseHeavy {
-  color: orange;
+.navBar h3 {
+  display: inline-block;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
-.moderate-traffic {
-  color: yellow;
+.navBar h3:hover {
+  background-color: black
 }
 
-.solutions {
-  color: #7a92a3; 
-  font-family: 'College';
-  margin: 200px; 
+.intro {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: double;
+  color: #e3daa1;
+  background-image: radial-gradient(black, black, transparent);
+}
+
+.main {
+  padding: 50px;
+  display: flex;
+}
+
+.hotTopics{
+  flex: 60%;
+  border-style: double;
+  color: #e3daa1;
+  background-image: radial-gradient(black, black, transparent);
+    margin-right: 30px;
+}
+.hotTopics h2 {
+  padding-left: 20px;
+  text-decoration: underline;
+}
+.hotTopics h3{
   text-align: center;
 }
-/* code above this mainly consists of small style changes, nothing really different between each one */
+.hotTopics img{
+  width: 50%;
+  display: block;
+  margin: auto;
+  transition: 1s;
+}
 
-button {
- position: fixed;
-  inset-block-end: 0;
-  inset-inline-start: 0%;
-  translate: 50% 0%;
-  max-inline-size: 30%;
-/* added blury effect because we wanted to and adjusted the position. inset, max inline size, etc. all kind of work together to edit the fixed position of the button (at least thats how i think of it)   */
-  filter: blur(1.5px) brightness(1.75) contrast(0.8);
-  background-color: #04AA6D; 
+.hotTopics img:hover {
+  width: 60%;
+  border-radius: 10%;
+}
+
+.hotTopics p{
+  padding: 20px;
+  font-size: 20px;
+}
+
+.bets{
+  flex: 40%;
+  border-style: double;
+  color: #e3daa1;
+  background-image: radial-gradient(black, black, transparent);
+}
+.bets h2{
+  padding-left: 20px;
+  text-decoration: underline;
+}
+.bets p{
+  padding: 20px;
+  font-size: 20px;
+}
+
+#betBtn {
   border: none;
-  color: white;
-  padding: 15px 32px;
+  background-color: #e3daa1;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+  padding: 20px 40px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   font-size: 16px;
-/*  this is mostly just some tweats to the stlye again */
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-
-.table {
-		font-size: 12px;
-		border: 1px solid #CCC; 
-		font-family: Arial, Helvetica, sans-serif;
-	} 
-
-	.table td {
-		padding: 4px;
-		margin: 3px;
-		border: 1px solid #CCC;
-	}
-	.table th {
-		background-color: #104E8B; 
-		color: #FFF;
-		font-weight: bold;
-	}
-
-.anywhere {
-  font-size: 21px;
+#betBtn:hover{
+  background-color: white;
 }
 
-h3 {
-  margin: 0;
-  padding: 0;
-}
-
-.list {
+#learnBtn{
+  border: none;
+  background-color: #e3daa1;
+  color: black;
+  margin: auto;
+  padding: 20px 40px;
   text-align: center;
-  margin: 5%;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#learnBtn:hover{
+  background-color: white;
+}
+
+
+.upcoming{
+  color: #e3daa1;
+  background-image: radial-gradient(black, black, transparent);
+  border-style: double;
+  margin: auto;
+  
+}
+
+.upcoming h2{
+  text-decoration: underline;
+  padding-left: 20px; 
+}
+
+.fightPic{
+  display: flex;
   padding-left: 20px;
-  padding-right: 20px;
+  padding-bottom: 20px;
 }
 
-.interstateDesc {
+.fight1{
+  flex: 20%;
+  position: relative;
   text-align: center;
 }
-/* again a lot of this is style stuff and padding stuff */
+.fight1 img{
+  width: 90%;
+  transition: 0.3s;
+}
+.fight1 img:hover{
+  width: 100%;
+  opacity: 0.5;
+}
 
-.north {
-  animation: moveBottomToTop 4s linear infinite;
+.fight1 p{
+  position: absolute;
+  font-size: 24px;
+  top: 50%;
+  left: 30%;
+  color: #e3daa1;
+  opacity: 0;
+  background-color: black;
+  padding: 10px;
+}
+
+.fight1:hover p{
+  opacity: 1;
+}
+
+
+
+.fight2{
+  flex: 20%;
+  position: relative;
   text-align: center;
 }
-/* start of the animation, giving it a name. specified ".north" to clarify for ourselves that it is the css animation moving the images */
-
-@keyframes moveBottomToTop {
-  0% {
-    transform: translateY(calc(-100% - 800px));
-  }
-  100% {
-    transform: translateY(calc(100% - 80px)); /* adjustable */
-  }
+.fight2 img{
+  width: 90%;
+  transition: 0.3s;
 }
-/* the translateY calc and subtracting pixels is just us editting the final and start position of the images to make it smoother and look cleaner */
-
-.i5 {
-  animation: moveLeftToRight 4s linear infinite;
+.fight2 img:hover{
+  width: 100%;
+  opacity: 0.5;
 }
 
-@keyframes moveLeftToRight {
-  0% {
-    transform: translateX(calc(-100% - 800px));
-  }
-  100% {
-    transform: translateX(calc(100% + 937px)); /* adjustable */
-  }
+.fight2 p{
+  position: absolute;
+  font-size: 24px;
+  top: 50%;
+  left: 30%;
+  color: #e3daa1;
+  opacity: 0;
+  background-color: black;
+  padding: 10px;
 }
-/* same thing as before, just changed Y to x to make it move horizontally and added and subtracted values to adujust start and final positions */
 
-.glow2 {
-  font-size: 35px;
-  color: #fff;
+.fight2:hover p{
+  opacity: 1;
+}
+
+
+
+.fight3{
+  flex: 20%;
+  position: relative;
   text-align: center;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
 }
-/* animation stuff as before. realizing now we made a glow2 just so "The Complete Guide" could be smaller */
+.fight3 img{
+  width: 90%;
+  transition: 0.3s;
+}
+.fight3:hover img{
+  width: 100%;
+  opacity: 0.5;
+}
 
-.glow {
-  font-size: 45px;
-  color: #fff;
+.fight3 p{
+  position: absolute;
+  font-size: 24px;
+  top: 50%;
+  left: 30%;
+  color: #e3daa1;
+  opacity: 0;
+  background-color: black;
+  padding: 10px;
+}
+
+.fight3:hover p{
+  opacity: 1;
+}
+
+
+
+.fight4{
+  flex: 20%;
+  position: relative;
   text-align: center;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
 }
-/* same thing for different class.... "Traffic in Los Angeles" portion of the titile */
-
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-  }
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
+.fight4 img{
+  width: 90%;
+  transition: 0.3s;
 }
-/* glow animation that changed the color from ___ to ____, just a subtle change making it glow pink */
-
-/* .red {
-  background: linear-gradient(90deg, rgb(255, 87, 51), rgb(127, 0, 255));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-} */
-/* realized we didn't need it so we're commenting it out */
-
-.root {
-  font-family: "IM Fell French Canon", serif;
-  background-color: #f7e1f3;
+.fight4:hover img{
+  width: 100%;
+  opacity: 0.5;
 }
 
-* {
-  margin: 0;
+.fight4 p{
+  position: absolute;
+  font-size: 24px;
+  top: 50%;
+  left: 30%;
+  color: #e3daa1;
+  opacity: 0;
+  background-color: black;
+  padding: 10px;
 }
-/* the entire website (*) */
-body {
-  display: grid;
-  place-items: center;
-  min-block-size: 100dvb;
-}
-/* style options */
 
-.thoughts {
-  font-size: clamp(3rem, 2rem + 10dvi, 16rem);
-  font-weight: inherit;
-  color: lightpink;
-  text-shadow: 
-    0 4em lightpink, 0 5em gold, 0 6em plum, 0 7em lightpink, 0 8em gold, 
+.fight4:hover p{
+  opacity: 1;
 }
-/* styling of the text for our event listener, which will be clicked and changed to different text */
 
-.nick {
-  position: fixed;
-  inset-block-end: 0;
-  inset-inline-start: 50%;
-  translate: 50% 0%;
-  max-inline-size: 30%;
-  filter: grayscale(1) brightness(1.75) contrast(0.8);
-/*  giving him a black and wihte feel and setting the position he will take on the screen  */
+
+.about{
+  border-style: double;
+  color: #e3daa1;
+  background-image: radial-gradient(black, black, transparent);
+  margin-top: 20px;
+  padding: 20px;
 }
